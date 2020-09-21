@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
+Route::get('/suppliers', 'HomeController@supplier');
+Route::get('/accounts', 'HomeController@accounts');
+Route::get('/products', 'HomeController@products');
+Route::get('/orders', 'HomeController@orders');
+Route::get('/sales', 'HomeController@sales');
+Route::get('/transactions', 'HomeController@transactions');
+

@@ -72,9 +72,22 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        
+    <div class="dashboard-nav">
+        <ul>
+            <a href="{{url('/accounts')}}"><li>Accounts</li></a>
+            <a href="{{url('/products')}}"><li>Products</li></a>
+            <a href="{{url('/orders')}}"><li>Orders</li></a>
+            <a href="{{url('/sales')}}"><li>Sales</li></a>
+            <a href="{{url('/suppliers')}}"><li>Suppliers</li></a>
+            <a href="{{url('/transactions')}}"><li>Transactions</li></a>
+        </ul>    
+    </div>
+
+
+    <div>
+        @yield('content')
+    </div>
     </div>
 </body>
 </html>

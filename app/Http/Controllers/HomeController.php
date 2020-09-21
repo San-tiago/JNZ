@@ -24,6 +24,39 @@ class HomeController extends Controller
     public function index()
     {   
         
-        return view('home');
+        return view('dashboard.home');
     }
+
+    public function supplier()
+    {   
+        
+        return view('dashboard.supplier');
+    }
+    public function accounts()
+    {   
+        
+        return view('dashboard.account');
+    }
+    public function products()
+    {   
+        
+        return view('dashboard.product');
+    }
+    public function orders()
+    {   
+        
+        return view('dashboard.order');
+    }
+    public function sales()
+    {   
+        
+        return view('dashboard.sale');
+    }
+    public function transactions()
+    {   
+        
+        return view('dashboard.transaction');
+    }
+
+
 }
