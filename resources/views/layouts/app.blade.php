@@ -75,12 +75,12 @@
         
     <div class="dashboard-nav">
         <ul>
-            <a href="{{url('/accounts')}}"><li>Accounts</li></a>
-            <a href="{{url('/products')}}"><li>Products</li></a>
-            <a href="{{url('/orders')}}"><li>Orders</li></a>
-            <a href="{{url('/sales')}}"><li>Sales</li></a>
-            <a href="{{url('/suppliers')}}"><li>Suppliers</li></a>
-            <a href="{{url('/transactions')}}"><li>Transactions</li></a>
+            <li><a href="{{url('/accounts')}}">Accounts</a></li>
+            <li><a href="{{url('/products')}}">Products</a></li>
+            <li><a href="{{url('/orders')}}">Orders</a></li>
+            <li><a href="{{url('/sales')}}">Sales</a></li>
+            <li><a href="{{url('/suppliers')}}">Suppliers</a></li>
+            <li><a href="{{url('/transactions')}}">Transaction</a></li>
         </ul>    
     </div>
 

@@ -25,3 +25,10 @@ Route::get('/orders', 'HomeController@orders');
 Route::get('/sales', 'HomeController@sales');
 Route::get('/transactions', 'HomeController@transactions');
 
+
+//Supplier Routes!
+
+Route::get('/add-supplier', 'SupplierController@create');
+Route::post('/supplier-add', 'SupplierController@store');
+
+

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Supplier;
 class HomeController extends Controller
 {
     /**
@@ -29,8 +29,11 @@ class HomeController extends Controller
 
     public function supplier()
     {   
+        $suppliers = Supplier::orderBy('supplier_name')->get();
         
-        return view('dashboard.supplier');
+        return view('dashboard.supplier',[
+            'suppliers' => $suppliers
+        ]);
     }
     public function accounts()
     {   
