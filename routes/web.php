@@ -29,6 +29,9 @@ Route::get('/transactions', 'HomeController@transactions');
 //Supplier Routes!
 
 Route::get('/add-supplier', 'SupplierController@create');
+Route::get('/supplier/edit/{id}', 'SupplierController@edit');
+Route::get('/supplier/delete/{id}', 'SupplierController@delete');
 Route::post('/supplier-add', 'SupplierController@store');
+Route::post('/supplier/update/{id}', 'SupplierController@update');
 
 

@@ -21,8 +21,8 @@
             <td>{{$supplier->contact_number}}</td>
             <td>{{$supplier->product}}</td>
             <td>
-                <a href="{{url('user/edit/'.$supplier->id)}}">Edit</a>
-                <a href="{{url('user/delete/'.$supplier->id)}}">Delete</a>
+                <a href="{{url('supplier/edit/'.$supplier->id)}}">Edit</a>
+                <a href="{{url('supplier/delete/'.$supplier->id)}}">Delete</a>
             </td>
         </tr>
         @endforeach
