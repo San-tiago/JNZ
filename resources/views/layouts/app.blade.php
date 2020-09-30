@@ -14,6 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="/css/nav.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -49,19 +50,17 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                            <li>
+                                <p>{{ Auth::user()->name }}</p>
+                                    
+                                <div>
+                                    <a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                                         @csrf
                                     </form>
                                 </div>
@@ -75,12 +74,14 @@
         
     <div class="dashboard-nav">
         <ul>
-            <li><a href="{{url('/accounts')}}">Accounts</a></li>
-            <li><a href="{{url('/products')}}">Products</a></li>
+
+            <li><a href="{{url('/products')}}">Available Products</a></li>
+            <li><a href="{{url('/localpurchase')}}">Local Purchase</a></li>
             <li><a href="{{url('/orders')}}">Orders</a></li>
             <li><a href="{{url('/sales')}}">Sales</a></li>
             <li><a href="{{url('/suppliers')}}">Suppliers</a></li>
-            <li><a href="{{url('/transactions')}}">Transaction</a></li>
+            <li><a href="{{url('/accounts')}}">Accounts</a></li>
+            <li><a href="{{url('/stocks')}}">Products Stock</a></li>
         </ul>    
     </div>
 

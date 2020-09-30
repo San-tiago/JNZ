@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Supplier;
+use App\Product;
+use App\Stock;
+use App\Customer;
 class HomeController extends Controller
 {
     /**
@@ -42,23 +45,34 @@ class HomeController extends Controller
     }
     public function products()
     {   
-        
+        $products = Stock::orderBy('product_name')->get();
+        return view('dashboard.product',[
+            'products' => $products
+        ]);
+
         return view('dashboard.product');
     }
     public function orders()
     {   
+        $customers = Customer::orderBy('first_name')->get();
+        return view('dashboard.order',[
+            'customers' => $customers
+        ]);
         
-        return view('dashboard.order');
+      
     }
     public function sales()
     {   
         
         return view('dashboard.sale');
     }
-    public function transactions()
+    public function stocks()
     {   
-        
-        return view('dashboard.transaction');
+        $stocks = Stock::orderBy('product_name')->get();
+        return view('dashboard.stock',[
+            'stocks' => $stocks
+        ]);
+       
     }
 
 
