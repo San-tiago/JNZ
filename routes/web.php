@@ -25,12 +25,20 @@ Route::get('/orders', 'HomeController@orders');
 Route::get('/sales', 'HomeController@sales');
 Route::get('/stocks', 'HomeController@stocks');
 
+// Customer Order Routes!
+
+Route::get('/add/order/{id}', 'CustomerOrdersController@addorder');
+Route::get('/customer/orders/{id}', 'CustomerOrdersController@orders');
+Route::post('/customerorder-add', 'CustomerOrdersController@store');
+
+
 //Customer Routes!
 Route::get('/add-order', 'CustomerController@create');
 Route::get('/customer/edit/{id}', 'CustomerController@edit');
 Route::get('/customer/delete/{id}', 'CustomerController@delete');
 Route::post('/customer-add', 'CustomerController@store');
 Route::post('/customer/update/{id}', 'CustomerController@update');
+
 
 
 //Stock Routes!

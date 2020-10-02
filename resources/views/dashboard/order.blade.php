@@ -13,7 +13,7 @@
             <th>Middle Name</th>
             <th>Address</th>
             <th>Contact Number</th> 
-            <th>Order/s</th> 
+            <th>Ordered Products</th> 
             <th>Action</th>
         </tr>
 
@@ -25,9 +25,10 @@
             <td>{{$customer->middle_name}}</td>
             <td>{{$customer->address}}</td>
             <td>{{$customer->contact_number}}</td>
+            <td><a href="{{url('customer/orders/'.$customer->id)}}">Orders</a></td>
             <td>
-                <a href="{{url('customer/edit/'.$customer->id)}}">Edit</a>
-                <a href="{{url('customer/delete/'.$customer->id)}}">Delete</a>
+                <a href="{{url('customer/edit/'.$customer->id)}}">  Edit</a>
+                <a href="{{url('customer/delete/'.$customer->id)}}">  Delete</a>
             </td>
         </tr>
         @endforeach

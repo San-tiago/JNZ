@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create User</h1>
+    <h1>Add Supplier Details</h1>
 
     <form action="{{url('/supplier-add')}}" method="post">
         @csrf

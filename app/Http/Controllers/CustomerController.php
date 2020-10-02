@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+
 class CustomerController extends Controller
 {
     public function store(Request $request){
@@ -23,21 +24,22 @@ class CustomerController extends Controller
     }
 
     public function edit($id){
-        $product = Stock::find($id);
-        return view('Stocks.edit', [
-            'product' => $product
+        $customer = Customer::find($id);
+        return view('Customers.edit', [
+            'customer' => $customer
         ]);
     }
 
     public function update(Request $request, $id){
-        $product = Stock::find($id);
-        $product->update($request->all());
-        return redirect('/stocks');
+        $customer = Customer::find($id);
+        $customer->update($request->all());
+        return redirect('/orders');
     }
 
     public function delete($id){
-        $product = Stock::find($id);
-        $product -> delete();
+        $customer = Customer::find($id);
+        $customer -> delete();
         return back();
     }
+
 }

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
    <h1>Available Products</h1>
-   <a href="{{url('/add-product')}}"><button>Add</button></a>
+  
    <table>
         <tr>
             <th>id</th>
@@ -19,8 +19,10 @@
             <td>{{$loop->index+1}}</td>
             <td>{{$product->product_name}}</td>
             <td>{{$product->category}}</td>
-            <td>{{$product->stock}}</td>
             <td>{{$product->price}}</td>
+            <td>{{$product->stock}}</td>
+            <td><a href="{{url('add/order/'.$product->id)}}">Order</a></td>
+            <td><a href="{{url('add/order/'.$product->id)}}">Purchase</a></td>
 
         </tr>
         @endforeach
